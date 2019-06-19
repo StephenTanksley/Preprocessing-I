@@ -294,7 +294,7 @@ h2 {
   margin: 0 auto;
   transition-duration: 0.4s;
 }
-.talk-button .talk-button:hover {
+.talk-button:hover {
   background-color: darkslategray;
   color: white;
 }
