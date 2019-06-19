@@ -149,6 +149,7 @@ body {
 
 //variables//
 @linkColor: #51a3c2;
+@buttonColor: rgb(233, 231, 231);
 
 //mixins//
 /*.flex-center {
@@ -183,10 +184,7 @@ h2 {
 	margin-left: 1rem;
 }
 
-.middle-margin {
-	width: 45%;
-	margin: 1rem;
-}
+
 
 .table-style {
 	padding: .5rem;
@@ -196,45 +194,92 @@ h2 {
 }
 
 .site-container {
-	max-width: 1000px;
+	width: 80%;
 	min-height: 100%;
 	margin: 0 auto;
 	font-size: 1.4rem;
 	box-sizing: border-box;
+
+	@media (max-width: 500px) {
+		margin: 0 auto;
+	}
 }
 
 .icon {
 	width: 15%;
+	display: flex;
+
+	@media (max-width: 500px) {
+		width: 72%;
+		margin: 0 auto;
+	}
 }
 
 .header {
 	display: flex;
 	width: 100%;
+	margin-top: 2rem;
 
-	.nav {
+	@media (max-width: 500px) {
 		display: flex;
-		flex-direction: flex-end;
-		width: 80%;
-		justify-content: space-around;
+		flex-direction: column;
 		align-content: center;
+		justify-content: center;
 		align-items: center;
-		margin-bottom: 2rem;
-		font-size: 1.6rem;
+		margin-bottom: 2em;
+	}
+}
+
+.nav {
+	display: flex;
+	flex-direction: flex-end;
+	width: 80%;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+	font-size: 1.6rem;
+
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 1rem;
+		padding: 3rem;
+		word-spacing: 3rem;
+		font-size: 100%;
+		text-align: center;
+		justify-items: space-between;
+	}
+
+	.nav a {
+		text-decoration: none;
+		color: @linkColor;
 
 		@media (max-width: 500px) {
-			width: 70%;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			margin: 0 auto;
+			margin-top: 1rem;
+			padding: 3rem;
+			word-spacing: 3rem;
+			font-size: 100%;
+			text-align: center;
+			justify-items: space-between;
 		}
 	}
 }
 
-.nav a {
-	text-decoration: none;
-	color: @linkColor;
-}
-
 .headshot {
 	width: 100%;
-	margin-left: 3.5rem;
+	margin-left: 0rem;
+	border-radius: 2em;
+
+	@media (max-width: 500px) {
+		display: none;
+	}
 }
 
 .top-content {
@@ -246,11 +291,11 @@ h2 {
 	align-items: center;
 	margin: 0 auto;
 	margin-top: 3rem;
-	margin-left: 1rem;
+	margin-left: 0rem;
 	margin-bottom: 3rem;
 
 	.top-left-content {
-		margin: 1rem;
+		margin: 0rem;
 		width: 100%;
 	}
 
@@ -269,13 +314,20 @@ h2 {
 	}
 }
 
-button {
+.talk-button {
 	width: 12rem;
 	display: flex;
 	border: .2rem black solid;
+	background-color: @buttonColor;
 	border-radius: .75rem;
 	justify-content: center;
 	margin: 0 auto;
+	transition-duration: 0.4s;
+
+	.talk-button:hover {
+		background-color: darkslategray;
+		color: white;
+	}
 }
 
 .middle-content {
@@ -283,18 +335,24 @@ button {
 	display: flex;
 	flex-direction: row;
 	margin: 0 auto;
+
+	@media (max-width: 500px) {
+		width: 100%;
+		flex-direction: column;
+		margin: 0 auto;
+		align-content: center;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
 }
 
 .middle-left-content {
-	.middle-margin();
-
-	ul {
-
-	}
+	.margin-style();
 }
 
 .middle-right-content {
-	.middle-margin();
+	.margin-style();
 }
 
 .bottom-content {
@@ -315,6 +373,7 @@ button {
 	th {
 		.header-style();
 	}
+
 	tr {
 		padding: 1.4rem;
 		margin: .3rem;
@@ -326,6 +385,42 @@ button {
 		padding: .5rem;
 		padding-left: 0;
 		text-align: left;
+		font-size: 1.3rem;
+	}
+
+	@media (max-width: 500px) {
+		display: none;
+	}
+}
+
+.contact {
+	.margin-style();
+	display: flex;
+	flex-direction: row;
+	margin-top: 2rem;
+	margin: 0 auto;
+	width: 100%;
+
+}
+
+.contact-icons {
+	width: 60%;
+	height: 50%;
+}
+
+.icon-container {
+	display: flex;
+	padding: 1%;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	margin: 0 auto;
+	margin-bottom: .5rem;
+	width: 30%;
+
+	@media (max-width: 500px) {
+		width: 50%;
+		height: 50%;
 	}
 }
 
