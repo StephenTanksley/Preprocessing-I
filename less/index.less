@@ -54,6 +54,102 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+}
+//variables//
+@link-color: rgb(100, 98, 98);
+@link-color-hover: darken(@link-color, 10%);
+
+
+//mixins//
+/*.flex-center {
+	display: flex;
+	margin: 0 auto;
+}
+*/
+.mediaquery {
+	@media (max-width: 500px) {
+		width: 60%;
+	}
+}
+
+.site-container {
+	max-width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	border: 1px solid black;
+}
+
+.nav {
+	display: flex;
+	width: 100%;
+	justify-items: space-between;
+	border: 1px red solid;
+
+	@media (max-width: 500px) {
+
+	}
+}
+
+.nav a {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+.top-content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	background-color: lightgray;
+	border: 1px solid green;
+}
+
+button {
+	width: 15%;
+	display: flex;
+	border: .1rem red solid;
+	border-radius: .1rem;
+	justify-content: center;
+}
+.middle-content {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	border: 1px solid red;
+	margin: 0 auto;
+}
+
+.middle-left-content {
+	margin: 1rem;
+}
+
+.middle-right-content {
+	margin: 1rem;
+}
+
+.bottom-content {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	border: 1px solid blue;
+	margin: 0 auto;
+}
+
+.table {
+	display: flex;
+	justify-content: flex-end;
+	padding: .1rem;
+}
+
+.footer {
+	text-align: center;
 }
 
