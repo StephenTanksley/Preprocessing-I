@@ -294,6 +294,11 @@ h2 {
 	margin-left: 0rem;
 	margin-bottom: 3rem;
 
+	@media (max-width: 500px) {
+		width: 100%;
+		border: 1px solid red;
+	}
+
 	.top-left-content {
 		margin: 0rem;
 		width: 100%;
@@ -337,12 +342,13 @@ h2 {
 	margin: 0 auto;
 
 	@media (max-width: 500px) {
-		width: 100%;
-		flex-direction: column;
-		margin: 0 auto;
-		align-content: center;
-		align-items: center;
-		justify-content: flex-start;
+		display: none;
+		// width: 100%;
+		// flex-direction: column;
+		// margin: 0 auto;
+		// align-content: center;
+		// align-items: center;
+		// justify-content: flex-start;
 	}
 
 }
